@@ -1,0 +1,155 @@
+# Email Validator System
+
+## Overview
+
+This project is a Python-based Email Validator that checks whether email addresses follow standard formatting rules. It supports both:
+
+1. Interactive validation (user enters emails manually)
+2. Batch validation (emails read from a file)
+
+The project was developed to demonstrate string processing, file handling, validation logic, and software development documentation.
+
+---
+
+## Features
+
+- Validates email addresses based on predefined rules
+- Detects missing or multiple '@' symbols
+- Checks local and domain parts of email addresses
+- Rejects invalid placement of periods (.)
+- Supports interactive user input
+- Supports batch processing from text files
+- Generates validation results automatically
+
+---
+
+## Technologies Used
+
+- Python 3
+- String Methods
+- File Handling
+- Functions
+- Conditional Statements
+
+---
+
+## Project Structure
+
+```text
+email-validator/
+│
+├── email_validator_interactive.py
+├── batch_email_validator.py
+├── input.txt
+├── output.txt
+├── README.md
+└── Email_Validator_Document.pdf
+```
+
+---
+
+## Validation Rules
+
+An email address is considered valid if:
+
+- Contains exactly one '@' symbol
+- Local part is not empty
+- Domain part is not empty
+- Local part does not start or end with '.'
+- Domain contains at least one '.'
+- Domain does not start or end with '.'
+- No spaces are present
+- Total email length does not exceed 254 characters
+- Local part does not exceed 64 characters
+
+Examples:
+
+| Email Address | Result |
+|---------------|---------|
+| ethna@gmail.com | VALID |
+| .ethna@gmail.com | INVALID |
+| @gmail.com | INVALID |
+| email@123.123.123.123 | INVALID |
+
+---
+
+## Interactive Mode
+
+Run:
+
+```bash
+python email_validator_interactive.py
+```
+
+Example:
+
+```text
+Enter email address:
+ethna@gmail.com
+
+VALID
+```
+
+---
+
+## Batch Processing Mode
+
+Place email addresses in `input.txt`.
+
+Run:
+
+```bash
+python batch_email_validator.py
+```
+
+The program reads all emails from the input file and writes results to `output.txt`.
+
+Example Output:
+
+```text
+VALID -- ethna@gmail.com
+INVALID -- .ethna@gmail.com
+INVALID -- @gmail.com
+```
+
+---
+
+## Sample Input
+
+```text
+ethna@gmail.com
+.ethna@gmail.com
+@gmail.com
+email@123.123.123.123
+```
+
+---
+
+## Learning Outcomes
+
+Through this project I gained experience in:
+
+- Python programming
+- Input validation
+- File handling
+- String manipulation
+- Software testing
+- Documentation and pseudocode design
+
+---
+
+## Future Improvements
+
+- Use Regular Expressions (Regex) for advanced validation
+- Support IPv4 and IPv6 domain validation
+- Add unit testing with pytest
+- Create a graphical user interface (GUI)
+- Develop a web-based email validator
+
+---
+
+## Author
+
+Your Name
+
+GitHub: https://github.com/yourusername
